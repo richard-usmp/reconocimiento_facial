@@ -23,4 +23,14 @@ for nameDir in peopleList:
         #cv2.waitKey(10)
     label = label + 1
 
-print('labels', labels)
+#print('labels', labels)
+#face_recognizer = cv2.face.EigenFaceRecognizer_create()
+face_recognizer = cv2.face.createEigenFaceRecognizer()
+
+#entrenando al reconocedor de rostros
+print("Entrenando...")
+face_recognizer. train(facesData, np.array(labels))
+
+#almancenar el modelo obtenido
+face_recognizer.write('modeloEigenFace.xml')
+print("Modelo almacenado...")
