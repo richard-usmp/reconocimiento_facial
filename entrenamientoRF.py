@@ -2,7 +2,7 @@ import cv2  #pip install opencv-python
 import os 
 import numpy as np #pip install numpy
 
-dataPath = 'C:/Users/Aaron/Desktop/IA/reconocimiento_facial/data'
+dataPath = 'D:/Ricardo/Documentos/reconocimiento_facial/data'
 peopleList = os.listdir(dataPath)
 print('Lista de personas: ', peopleList)
 
@@ -31,7 +31,7 @@ face_recognizer = cv2.face.LBPHFaceRecognizer_create() #pip install opencv-contr
 
 #entrenando al reconocedor de rostros
 print("Entrenando...")
-face_recognizer.train(facesData, np.array(lab1els))
+face_recognizer.train(facesData, np.array(labels))
 
 #almancenar el modelo obtenido
 face_recognizer.write('modeloEigenFace.xml')
