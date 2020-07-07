@@ -3,7 +3,7 @@ import os
 import imutils #pip install imutils
 
 personName = 'Aaron'
-dataPath = 'C:/Users/Aaron/Desktop/IA/reconocimiento_facial/data'
+dataPath = 'D:/Ricardo/Documents/reconocimiento_facial/data'
 personPath = dataPath + '/' + personName
 #print(personPath)
 if not os.path.exists(personPath):

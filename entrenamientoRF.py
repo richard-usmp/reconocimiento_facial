@@ -2,7 +2,7 @@ import cv2  #pip install opencv-python
 import os 
 import numpy as np #pip install numpy
 
-dataPath = 'D:/Ricardo/Documentos/reconocimiento_facial/data'
+dataPath = 'D:/Ricardo/Documents/reconocimiento_facial/data'
 peopleList = os.listdir(dataPath)
 print('Lista de personas: ', peopleList)
 
@@ -34,5 +34,5 @@ print("Entrenando...")
 face_recognizer.train(facesData, np.array(labels))
 
 #almancenar el modelo obtenido
-face_recognizer.write('modeloEigenFace.xml')
+face_recognizer.write('modeloLBPHFace.xml')
 print("Modelo almacenado...")
