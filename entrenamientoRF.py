@@ -31,7 +31,7 @@ face_recognizer = cv2.face.LBPHFaceRecognizer_create() #pip install opencv-contr
 
 #entrenando al reconocedor de rostros
 print("Entrenando...")
-face_recognizer.train(facesData, np.array(labels))
+face_recognizer.train(facesData, np.array(lab1els))
 
 #almancenar el modelo obtenido
 face_recognizer.write('modeloEigenFace.xml')

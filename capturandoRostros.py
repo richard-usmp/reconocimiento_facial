@@ -2,15 +2,15 @@ import cv2  #pip install opencv-python
 import os 
 import imutils #pip install imutils
 
-personName = 'Ricardo'
-dataPath = 'D:/Ricardo/Documentos/reconocimiento_facial/data'
+personName = 'Aaron'
+dataPath = 'C:/Users/Aaron/Desktop/IA/reconocimiento_facial/data'
 personPath = dataPath + '/' + personName
 #print(personPath)
 if not os.path.exists(personPath):
     print('Carpeta creada: ', personPath)
     os.makedirs(personPath)
 
-cap = cv2.VideoCapture('Ricardo.mp4')
+cap = cv2.VideoCapture('Aaron.mp4')
 
 faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 c = 0
