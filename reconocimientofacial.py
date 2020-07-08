@@ -9,7 +9,7 @@ face_recognizer = cv2.face.LBPHFaceRecognizer_create()
 
 face_recognizer.read('modeloLBPHFace.xml')
 
-cap = cv2.VideoCapture('D:/Ricardo/Documents/reconocimiento_facial/Aaron2-0-1.mp4')
+cap = cv2.VideoCapture(0)
 
 faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
 
@@ -28,7 +28,7 @@ while True:
 
         cv2.putText(frame, '{}'.format(result), (x,y-5), 1, 1.3, (255,255,0), 1, cv2.LINE_AA)
 
-        if result[1] < 70:
+        if result[1] < 100:
             cv2.putText(frame, '{}'.format(imagePaths[result[0]]), (x,y-25), 2, 1.1, (0,255,0), 1, cv2.LINE_AA)
             cv2.rectangle(frame, (x,y), (x+w, y+h), (0,255,0), 2)
         else:
