@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio web</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <style>
+        .box__dragndrop,
+        .box__uploading,
+        .box__success,
+        .box__error {
+            display: none;
+        }
+    </style>
+    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+        <a class="navbar-brand" href="/">Reconocimiento Facial</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ url_for('perdido_alguien') }}">¿Has perdido a alguien?<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('personas_desaparecidas') }}">Personas desaparecidas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Buscando...</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                Inteligencia Artificial y Robótica
+            </span>
+        </div>
+    </nav>
+    </div>
+    <div class="container">
+        <form action="/formulario" method="POST">
+            <p><strong>Nombre:</strong> <input type="text" name="nombre" size="40" required></p>
+            <p><strong>Apellido:</strong> <input type="text" name="apellido" required></p>
+            <p><strong>Edad:</strong> <input type="text" name="edad" required></p>
+                <form class="box" method="post" action="" enctype="multipart/form-data">
+                    <div class="box__input">
+                        <label for="file"><strong>Adjuntar Video (solo de contener 1 persona):</strong><span class="box__dragndrop"> or drag it here</span></label>
+                        <br><input class="box__file" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple required/>                       
+                        <br><br><button class="box__button" type="submit">Enviar</button>
+                    </div>
+                    <div class="box__uploading">Uploading…</div>
+                    <div class="box__success">Done!</div>
+                    <div class="box__error">Error! <span></span>.</div>
+                </form>              
+            </p>
+          </form>        
+    </div>
+</body>
+</html>
