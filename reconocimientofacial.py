@@ -1,7 +1,8 @@
 import cv2  #pip install opencv-python
 import os
+import imutils
 
-dataPath = 'D:/Ricardo/Documents/reconocimiento_facial/data'
+dataPath = 'D:/Usmp 2020-1/Inteligencia Artificial/trabajo final/reconocimiento_facial/data'
 imagePaths = os.listdir(dataPath)
 print('imagePath=', imagePaths)
 

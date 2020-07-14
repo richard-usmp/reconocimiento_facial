@@ -2,7 +2,7 @@ import cv2  #pip install opencv-python
 import os 
 import numpy as np #pip install numpy
 
-dataPath = 'D:/Ricardo/Documents/reconocimiento_facial/data'
+dataPath = 'D:/Usmp 2020-1/Inteligencia Artificial/trabajo final/reconocimiento_facial/data'
 peopleList = os.listdir(dataPath)
 print('Lista de personas: ', peopleList)
 

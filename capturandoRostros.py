@@ -3,7 +3,7 @@ import os
 import imutils #pip install imutils
 
 class capturandoRostros:
-    persona = ""
+    persona ='Deyvid'
     edad = 0
     video = ""
     
@@ -13,7 +13,7 @@ class capturandoRostros:
         self.video = video
     
     personName = persona
-    dataPath = 'D:/Ricardo/Documents/reconocimiento_facial/data'
+    dataPath = 'D:/Usmp 2020-1/Inteligencia Artificial/trabajo final/reconocimiento_facial/data'
     personPath = dataPath + '/' + personName
     #print(personPath)
     if not os.path.exists(personPath):
@@ -21,7 +21,7 @@ class capturandoRostros:
         os.makedirs(personPath)
 
     #cap = cv2.VideoCapture('Aaron.mp4')
-    cap = cv2.VideoCapture(video)
+    cap = cv2.VideoCapture('Deyvid.mp4')
 
     faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
     c = 0
