@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 import capturandoRostros as CP
+from pip._vendor.urllib3 import request
 
 app = Flask (__name__)
 
