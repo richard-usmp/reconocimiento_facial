@@ -2,7 +2,7 @@ import cv2  #pip install opencv-python
 import os
 import imutils
 
-dataPath = 'D:/Usmp 2020-1/Inteligencia Artificial/trabajo final/reconocimiento_facial/data'
+dataPath = 'D:/Ricardo/Documentos/reconocimiento_facial/data'
 imagePaths = os.listdir(dataPath)
 print('imagePath=', imagePaths)
 
@@ -11,6 +11,9 @@ face_recognizer = cv2.face.LBPHFaceRecognizer_create()
 face_recognizer.read('modeloLBPHFace.xml')
 
 cap = cv2.VideoCapture(0)
+#cap = cv2.VideoCapture("D:/Ricardo/Documentos/reconocimiento_facial/imagenes_y_videos_de_prueba/Priscila_para_probar.mp4")
+#cap = cv2.VideoCapture("D:/Ricardo/Documentos/reconocimiento_facial/imagenes_y_videos_de_prueba/Aaron2-0-1.mp4")
+#cap = cv2.VideoCapture("D:/Ricardo/Documentos/reconocimiento_facial/imagenes_y_videos_de_prueba/Ricardo_para_probar.mp4")
 
 faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
 
