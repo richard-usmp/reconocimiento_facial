@@ -14,7 +14,7 @@
         .box__error {
             display: none;
         }
-    </style>
+    </style>  
     <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
         <a class="navbar-brand" href="/">Reconocimiento Facial</a>
@@ -44,16 +44,16 @@
             <p><strong>Nombre:</strong> <input type="text" name="nombre" size="40" required></p>
             <p><strong>Apellido:</strong> <input type="text" name="apellido" required></p>
             <p><strong>Edad:</strong> <input type="text" name="edad" required></p>
-            <div class="box__input">
-                <label for="file"><strong>Adjuntar Video (solo de contener 1 persona):</strong><span class="box__dragndrop"> or drag it here</span></label>
-                <br><input class="box__file" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple required/>                       
-                <br><br><button class="box__button" type="submit">Enviar</button>
-            </div>
-            <div class="box__uploading">Uploading…</div>
-            <div class="box__success">Done!</div>
-            <div class="box__error">Error! <span></span>.</div>            
+            <label for="file"><strong>Adjuntar Video (solo debe contener 1 persona):</strong><span class="box__dragndrop"> or drag it here</span></label>
+            <br><input type="file" name="files" id="file" multiple required/>                       
+            <br><br><button class="box__button" type="submit">Enviar</button>           
             </p>
           </form>        
     </div>
+    <script>
+        document.getElementById('file').onchange = function () {
+            console.log(this.value);
+        }
+    </script>
 </body>
 </html>
