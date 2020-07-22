@@ -32,7 +32,7 @@ while True:
 
         cv2.putText(frame, '{}'.format(result), (x,y-5), 1, 1.3, (255,255,0), 1, cv2.LINE_AA)
 
-        if result[1] < 100:
+        if result[1] < 90:
             cv2.putText(frame, '{}'.format(imagePaths[result[0]]), (x,y-25), 2, 1.1, (0,255,0), 1, cv2.LINE_AA)
             cv2.rectangle(frame, (x,y), (x+w, y+h), (0,255,0), 2)
         else:

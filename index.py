@@ -22,14 +22,15 @@ def pruebas():
 
 @app.route('/formulario',methods=['POST'])
 def formulario():
-        if request.method == 'POST':
-            nombre = request.form['nombre']
-            apellido = request.form['apellido']
-            edad = request.form['edad']
-            video = request.form['video']
-            print(nombre,apellido,edad)
-            CP.capturandoRostros(nombre,apellido,edad,video)
-            print('received')    
+    print('ENTRA')  
+    if request.method == 'POST':
+        nombre = request.form['nombre']
+        apellido = request.form['apellido']
+        edad = request.form['edad']
+        video = request.form['video']
+        print(nombre,apellido,edad)
+        CP.capturandoRostros(nombre,apellido,edad,video)
+        print('received')    
 
-if __name__ == '__main__':
-    app.run(debug=True)
+    if __name__ == '__main__':
+        app.run(debug=True)

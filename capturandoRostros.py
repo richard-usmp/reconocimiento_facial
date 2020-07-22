@@ -20,7 +20,7 @@ class capturandoRostros:
         print('Carpeta creada: ', personPath)
         os.makedirs(personPath)
 
-    cap = cv2.VideoCapture('Ricardo.mp4')
+    cap = cv2.VideoCapture(video)
     #cap = cv2.VideoCapture('Aaron.mp4')
     #cap = cv2.VideoCapture('Deyvid.mp4')
     #cap = cv2.VideoCapture('Priscila.mp4')
