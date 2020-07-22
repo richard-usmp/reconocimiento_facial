@@ -3,7 +3,7 @@ import os
 import imutils #pip install imutils
 
 class capturandoRostros:
-    persona ='Ricardo'
+    persona ='Priscila'
     edad = 0
     video = ""
     
@@ -21,6 +21,7 @@ class capturandoRostros:
         os.makedirs(personPath)
 
     cap = cv2.VideoCapture(video)
+    #cap = cv2.VideoCapture('Ricardo.mp4')
     #cap = cv2.VideoCapture('Aaron.mp4')
     #cap = cv2.VideoCapture('Deyvid.mp4')
     #cap = cv2.VideoCapture('Priscila.mp4')
