@@ -1,11 +1,13 @@
 from flask import Flask, render_template, request
-
-
+import capturandoRostros as CP
+import shutil
+import os
+import entrenamientoRF
 app = Flask (__name__)
 
 @app.route('/')
 def home():
-    import reconocimientofacial as R
+    ##import reconocimientofacial as R
     return render_template('home.html')
 
 @app.route('/perdido_alguien')
@@ -22,19 +24,25 @@ def pruebas():
 
 @app.route('/formulario',methods=['POST'])
 def formulario():
-    import capturandoRostros as CP
-    print('ENTRA-------------------------------------------------------------')  
+    
+    
     
    
     nombre = request.form['nombre']
     apellido = request.form['apellido']
     edad = request.form['edad']
     video = request.form['files']   
-    print(nombre,apellido,edad)
+    print(nombre,apellido,edad,video)
+    
+    
+    shutil.move(video, 'C:/Users/USUARIO/Desktop/PIA/reconocimiento_facial/'+video)
+    
     CP.capturandoRostros(nombre,apellido,edad,video)
-    print('received')
-
-       
+    CP.construir(nombre,apellido,edad,video)
+    
+    print('received-------------------------------------------------------------------') 
+    return render_template('perdido_alguien.html')
+    
 
 if __name__ == '__main__':
         app.run(debug=True)
