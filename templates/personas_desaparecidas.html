@@ -31,6 +31,18 @@
         </div>
       </nav>
       </div>
-      
+      <img src="rostro_0.jpg"/>
+      <table>
+        <tr>
+          <th>
+            <img src="D:/Ricardo/Documentos/reconocimiento_facial/data/Aaron/rostro_0.jpg"/>
+          </th>
+        </tr>
+        <tr>
+          {% for i in arrayNom_e %}
+          <th> {{loop.index}}. {{i}} | |</th>
+          {% endfor %}
+        </tr>
+      </table>
 </body>
 </html>
