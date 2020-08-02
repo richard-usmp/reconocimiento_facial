@@ -3,7 +3,7 @@ import capturandoRostros as CP
 import getNombresyFotos as getNF
 import shutil
 import os
-import entrenamientoRF
+
 app = Flask (__name__, static_url_path='/data')
 
 @app.route('/')
@@ -43,12 +43,12 @@ def formulario():
     video = request.form['files']   
     print(nombre,apellido,edad,video)
     
-    
-    shutil.move(video, 'C:/Users/USUARIO/Desktop/PIA/reconocimiento_facial/'+video)
+    shutil.move(video, 'C:/Users/Ricardo/Desktop/reconocimiento_facial/'+video)
     
     CP.capturandoRostros(nombre,apellido,edad,video)
     CP.construir(nombre,apellido,edad,video)
     
+    import entrenamientoRF
     print('received-------------------------------------------------------------------') 
     return render_template('perdido_alguien.html')
     

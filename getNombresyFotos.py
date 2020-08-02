@@ -1,7 +1,7 @@
 import os 
 import numpy as np #pip install numpy
 
-dataPath = 'D:/Ricardo/Documentos/reconocimiento_facial/data'
+dataPath = 'C:/Users/Ricardo/Desktop/reconocimiento_facial/'
 peopleList = os.listdir(dataPath)
 print('Lista de personas: ', peopleList)
 
