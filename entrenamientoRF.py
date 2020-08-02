@@ -20,7 +20,7 @@ for nameDir in peopleList:
         facesData.append(cv2.imread(personPath + '/' + fileName, 0))
         image = cv2.imread(personPath + '/' + fileName, 0)
     label = label + 1
-
+    
 #print('labels', labels)
 #face_recognizer = cv2.face.EigenFaceRecognizer_create()
 #face_recognizer = cv2.face.FisherFaceRecognizer_create()
