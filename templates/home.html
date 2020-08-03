@@ -1,36 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Visión Artificial - Home</title>
-        <link rel="icon" type="image/png" href="https://image.flaticon.com/icons/svg/1230/1230997.svg" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <title>Visión Artificial - Home</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <link rel="icon" type="image/png" href="https://image.flaticon.com/icons/svg/1230/1230997.svg" />
+ 
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+  
+ 
+<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  
 </head>
+
 <body>
+
+  <header id="header">
     <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
-        <a class="navbar-brand" href="/">Reconocimiento Facial</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{{ url_for('perdido_alguien') }}">¿Has perdido a alguien?<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('personas_desaparecidas') }}">Personas desaparecidas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">Buscando...</a>
-            </li>
-          </ul>
-          <span class="navbar-text">
-            Inteligencia Artificial y Robótica
-          </span>
-        </div>
-      </nav>
+
+      <div id="logo" class="pull-left">
+        <a href="#hero"><img src="img/logo2.png" alt="" title="" /></img></a>
+       
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#hero">Reconocimiento Facial</a></li>
+          <li><a href="perdido_alguien.html">¿Has perdido a alguien?</a></li>
+          <li><a href="personas_desaparecidas.html">Personas desaparecidas</a></li>
+          
+        </ul>
+      </nav> 
     </div>
+  </header>
+
+
+  <section id="hero">
+    <div class="hero-container">
+      <h1>Bienvenidos al Reconocimiento FAcial</h1>
+      <h2>Podemos encontrar a la persona que buscas</h2>
+      <a href="perdido_alguien.html" class="btn-get-started">Empezar</a>
+    </div>
+  </section>
+
+  <main id="main">
+
+          
+    <section id="facts">
+      <div class="container wow fadeIn">
+        <div class="section-header">
+          <h3 class="section-title">Efectividad</h3>
+          <p class="section-description">Con Nuestro reconocimiento facial encontraras a la persona que buscas mas rapido</p>
+        </div>
+        <div class="row counters">
+
+  				<div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">232</span>
+            <p>clientes</p>
+  				</div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">521</span>
+            <p>Encontrados al dia</p>
+  				</div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">1,463</span>
+            <p>Consultas</p>
+  				</div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">15</span>
+            <p>Registros por Hora</p>
+  				</div>
+
+  			</div>
+
+      </div>
+    </section>
+    
+       
+    <section id="call-to-action">
+      <div class="container wow fadeIn">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">Maching Learning</h3>
+            <p class="cta-text"> Aprendizaje constante para definir patrones de comportamiento</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="perdido_alguien.html">Empezar</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+        
+    <section id="team">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h3 class="section-title">Nosotros</h3>
+          <p class="section-description">Estudiantes de Ingeniera de Sistema de la USMP</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-5 col-md-5">
+            <div class="member">
+              <div class="pic"><img src="img/team-1.jpg" alt=""></div>
+              <h4>Deyvid Almonacid</h4>
+              <span>Chief Executive Officer</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="img/team-2.jpg" alt=""></div>
+              <h4>Aaron Mormontoy</h4>
+              <span>Product Manager</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="img/team-3.jpg" alt=""></div>
+              <h4>Ricardo Leon</h4>
+              <span>CTO</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+
+      </div>
+    </section>
+    
+  
+    
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>GALD</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+       
+        
+        Designed by <a href="https://bootstrapmade.com/">www.hostgald.com</a>
+      </div>
+    </div>
+  </footer>
+  
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+
+  
+  <script src="contactform/contactform.js"></script>
+
+  
+  <script src="js/main.js"></script>
+
 </body>
 </html>
