@@ -29,6 +29,11 @@ def personas_desaparecidas():
 
     return render_template('personas_desaparecidas.html', arrayNom_e = arrayNom, foto = fotox)
 
+@app.route('/buscando')
+def buscando():
+    import reconocimientofacial as R
+    return render_template('buscando.html')
+
 @app.route('/tests')
 def pruebas():
     
@@ -46,7 +51,7 @@ def formulario():
     video = request.form['files']   
     print(nombre,apellido,edad,video)
     
-    shutil.move(video, 'C:/Users/Ricardo/Desktop/reconocimiento_facial/'+video)
+    shutil.move(video, 'D:/Ricardo/Documentos/reconocimiento_facial/'+video)
     
     CP.capturandoRostros(nombre,apellido,edad,video)
     CP.construir(nombre,apellido,edad,video)

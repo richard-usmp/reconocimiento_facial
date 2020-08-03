@@ -21,7 +21,7 @@ def construir(nombre, apellido, edad, video):
     
         print('-------------------ENTRA------------------')
         personName = nombre+''+apellido
-        dataPath = 'C:/Users/Ricardo/Desktop/reconocimiento_facial/data'
+        dataPath = 'D:/Ricardo/Documentos/reconocimiento_facial/data'
         personPath = dataPath + '/' + personName
         #print(personPath)
         if not os.path.exists(personPath):

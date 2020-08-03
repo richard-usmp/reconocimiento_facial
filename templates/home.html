@@ -39,9 +39,9 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="home.html">Reconocimiento Facial</a></li>
-          <li><a href="perdido_alguien.html">¿Has perdido a alguien?</a></li>
-          <li><a href="personas_desaparecidas.html">Personas desaparecidas</a></li>
+          <li class="menu-active"><a href="{{ url_for('home') }}">Reconocimiento Facial</a></li>
+          <li><a href="{{ url_for('perdido_alguien') }}">¿Has perdido a alguien?</a></li>
+          <li><a href="{{ url_for('buscando') }}">Buscando</a></li>
           
         </ul>
       </nav> 
@@ -51,9 +51,9 @@
 
   <section id="hero">
     <div class="hero-container">
-      <h1>Bienvenidos al Reconocimiento FAcial</h1>
+      <h1>Bienvenidos al Reconocimiento Facial</h1>
       <h2>Podemos encontrar a la persona que buscas</h2>
-      <a href="perdido_alguien.html" class="btn-get-started">Empezar</a>
+      <a href="{{ url_for('perdido_alguien') }}" class="btn-get-started">Empezar</a>
     </div>
   </section>
 
@@ -102,7 +102,7 @@
             <p class="cta-text"> Aprendizaje constante para definir patrones de comportamiento</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="perdido_alguien.html">Empezar</a>
+            <a class="cta-btn align-middle" href="{{ url_for('perdido_alguien') }}">Empezar</a>
           </div>
         </div>
 
@@ -149,7 +149,7 @@
             <div class="member">
               <div class="pic"><img src="img/team-3.jpg" alt=""></div>
               <h4>Ricardo Leon</h4>
-              <span>CTO</span>
+              <span>CTO</span><br>
               <div class="social">
                 <a href=""><i class="fa fa-twitter"></i></a>
                 <a href=""><i class="fa fa-facebook"></i></a>
