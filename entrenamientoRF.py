@@ -25,7 +25,7 @@ for nameDir in peopleList:
 #print('labels', labels)
 #face_recognizer = cv2.face.EigenFaceRecognizer_create()
 #face_recognizer = cv2.face.FisherFaceRecognizer_create()
-face_recognizer = cv2.face.LBPHFaceRecognizer_create()          #pip install opencv-contrib-python --user
+face_recognizer = cv2.face.LBPHFaceRecognizer_create()         #pip install opencv-contrib-python --user
 
 
 #entrenando al reconocedor de rostros

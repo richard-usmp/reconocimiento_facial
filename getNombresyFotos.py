@@ -16,3 +16,8 @@ def getImage():
             image_url = personPath + '/' +fileName
         image.append(image_url)
     return image
+
+
+
+
+    

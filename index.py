@@ -19,16 +19,19 @@ def perdido_alguien():
 def personas_desaparecidas():
     arrayNom =[]
     fotox = []
+
     for i in range(len(getNF.getNombres())):
         arrayNom.append(getNF.getNombres()[i])
     
     for i in range(len(getNF.getImage())):
         fotox.append(getNF.getImage()[i])
         print(fotox)
+
     return render_template('personas_desaparecidas.html', arrayNom_e = arrayNom, foto = fotox)
 
 @app.route('/tests')
 def pruebas():
+    
     return render_template('tests.html')
 
 @app.route('/formulario',methods=['POST'])

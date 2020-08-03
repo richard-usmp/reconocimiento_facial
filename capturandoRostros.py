@@ -19,7 +19,7 @@ class capturandoRostros:
 def construir(nombre, apellido, edad, video):    
     if(nombre!=''):
     
-        print('-------------------ENTRA-------------------')
+        print('-------------------ENTRA------------------')
         personName = nombre+''+apellido
         dataPath = 'C:/Users/Ricardo/Desktop/reconocimiento_facial/data'
         personPath = dataPath + '/' + personName
@@ -54,3 +54,6 @@ def construir(nombre, apellido, edad, video):
                 break
         cap.release()
         cv2.destroyAllWindows()
+
+
+        
