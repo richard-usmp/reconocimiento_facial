@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>Visión Artificial - Alguien Perdido</title>
-        <link rel="icon" type="image/png" href="https://image.flaticon.com/icons/svg/1230/1230997.svg" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link rel="icon" type="image/png" href="https://image.flaticon.com/icons/svg/1230/1230997.svg" />
+
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700"
+        rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
 </head>
+
 <body>
     <style>
         .box__dragndrop,
@@ -15,48 +37,97 @@
         .box__error {
             display: none;
         }
-    </style>  
-    <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
-        <a class="navbar-brand" href="/">Reconocimiento Facial</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{ url_for('perdido_alguien') }}">¿Has perdido a alguien?<span class="sr-only">
-                        
-                    </span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('personas_desaparecidas') }}">Personas desaparecidas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Buscando...</a>
-                </li>
-            </ul>
-            <span class="navbar-text">
-                Inteligencia Artificial y Robótica
-            </span>
+    </style>
+
+    <header id="header">
+        <div class="container">
+
+            <div id="logo" class="pull-left">
+                <a href="#hero"><img src="img/logo2.png" alt="" title="" /></img></a>
+
+            </div>
+
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li class="menu-active"><a href="home.html">Reconocimiento Facial</a></li>
+                    <li><a href="perdido_alguien.html">¿Has perdido a alguien?</a></li>
+                    <li><a href="personas_desaparecidas.html">Personas desaparecidas</a></li>
+
+                </ul>
+            </nav>
         </div>
-    </nav>
-    </div>
-    <div class="container">
-        <form action="/formulario" method="POST">
-            <p><strong>Nombre:</strong> <input type="text" name="nombre" size="40" required></p>
-            <p><strong>Apellido:</strong> <input type="text" name="apellido" required></p>
-            <p><strong>Edad:</strong> <input type="text" name="edad" required></p>
-            <label for="file"><strong>Adjuntar Video (solo debe contener 1 persona):</strong><span class="box__dragndrop"> or drag it here</span></label>
-            <br><input type="file" name="files" id="file" multiple required/>                       
-            <br><br><button class="box__button" type="submit">Enviar</button>           
-            </p>
-          </form>        
-    </div>
-    <script>
+    </header>
+
+
+    <section id="hero">
+        <div class="hero-container">
+            <h1>¿Se Perdio Alguien?</h1>
+            <h2>No te preocupes, podemos encontrarlo</h2>
+            <a href="#EncontrarA" class="btn-get-started">Encontrarlo Ahora</a>
+        </div>
+        </section>
+        <br>
+        <div class="container" id="EncontrarA" >
+            <form action="/formulario" method="POST" >
+                <p><strong>Nombre:</strong>
+                    <input type="text" name="nombre" size="40" required></p>
+                <p><strong>Apellido:</strong>
+                    <input type="text" name="apellido" required></p>
+                <p><strong>Edad:</strong>
+                    <input type="text" name="edad" required></p>
+                <label for="file"><strong>Adjuntar Video (solo debe contener 1 persona):</strong><span class="box__dragndrop">
+                        or drag it here</span></label>
+                <br><input type="file" name="files" id="file" multiple required />
+                </p>
+            </form>
+        </div>
+        <script>
         document.getElementById('file').onchange = function () {
             console.log(this.value);
         }
     </script>
+
+
+
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong>GALD</strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+
+
+                Designed by <a href="https://bootstrapmade.com/">www.hostgald.com</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/superfish/hoverIntent.js"></script>
+    <script src="lib/superfish/superfish.min.js"></script>
+
+
+    <script src="contactform/contactform.js"></script>
+
+
+    <script src="js/main.js"></script>
+
 </body>
+
 </html>
